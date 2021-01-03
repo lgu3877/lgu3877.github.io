@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/* BODY */
+body {
+  margin : 0px;
+  font-family: 'Do Hyeon', sans-serif;
+  color: #434343;
+  background: #DAE3E7;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+	font-weight : 700;
+	color : #4951A;
+}
+
+/* HEADER */
+.header {
+	width : 100%;
+	border-top: 20px solid #000000;
+}
+
+/* ASIDE */
+.aside {
+	position : fixed;
+	width : 300px;
+	height : 100%;
+	border-left: 10px solid #000000;
+	padding: 30px;
+	background-color: #F5F5F5;
+}
+
+/* ASIDE -> leftSideMenu */
+.leftSideMenu {
+	width : 100%;
+	height : 100%;
+}
+
+.leftSideMenu img {
+	height : 200px;
+	widht : 200px;
+	box-shadow : 1px 2px 5px;
+	border-radius: 100px 100px 100px 100px;
+}
+
+
+/* CONTENTS WRAPPER */
+.contents-wrapper {
+	padding : 40px;
+	width : 100%;
+	height : 100%;
+	
+}
+
+
+@media (max-width: 767px) {
+/*   .header { */
+/*     text-align: center; */
+/*   } */
+/*   .header .profile-image { */
+/*     float: none !important; */
+/*     margin: 0 auto; */
+/*   } */
+/*   .header .profile-content { */
+/*     float: none !important; */
+/*     text-align: center; */
+/*   } */
+/*   .header .btn { */
+/*     margin-top: 30px; */
+/*     float: none !important; */
+/*   } */
+/*   .project-image { */
+/*     margin-bottom: 15px; */
+/*   } */
+}
+
+@media (min-width: 1400px) {
+/*   .container { */
+/*     width: 1360px; */
+/*   } */
+}
