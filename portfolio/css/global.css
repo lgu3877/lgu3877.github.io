@@ -1,10 +1,13 @@
 @charset "UTF-8";
 
 /* BODY */
-html,
+html {
+	height : 100%;
+}
 body {
   width : 100%;
-  height : 100%;
+  min-height : 100%;
+/*   height : 100%; */
   margin : 0px;
   font-family: 'Do Hyeon', sans-serif;
   color: #434343;
@@ -44,6 +47,7 @@ h2 {
 
 .subHead {
 	margin-top : 0;
+	margin-bottom: 15px;
 	font-size : 30px;
 }
 
@@ -59,6 +63,7 @@ li {
 .list-none {
 	padding-left : 5px;
 	list-style : none;
+	margin-bottom: 10px;
 }
 
 /* P TAGS */
@@ -66,6 +71,16 @@ p {
 	text-align : center;
 	margin-top: 5px;
 }
+
+.words {
+	text-align : left;
+	display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
 
 /* HEADER */
 .header {	
@@ -163,13 +178,15 @@ p {
 }
 
 .first-line {
-	flex : 1;
+	
+	flex : 7;
+	height : 100%;
 	padding-left: 10px;
 	padding-right: 10px;
 }
 
 .second-line{
-	flex : 1;
+	flex : 3;
 	padding-left: 10px;
 	padding-right: 10px;
 }
@@ -181,20 +198,22 @@ p {
 	border-radius: 4.4%;
 }
 
-.skillnames {
+.buketHead {
 	font-weight : bold;
 	margin-bottom: 5px;
+	font-weight: bold;
 }
 .bucket {
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 	
 }
+
 
 
 /* SECTIONS */
 .aboutMyProfile {
 	width : 100%;	
-	height : 500px;	
+	height : 100%;	
 }
 
 .aboutMyProfile .sectionPadding .innerContents .bucket .list-none li {
@@ -206,6 +225,9 @@ p {
 	font-size : 50px;
 }
 
+.aboutMyProfile .sectionPadding .innerContents .bucket {
+	margin-bottom: 3px;
+}
 .levels {
 	min-width : 250px;
 	max-width : 100%;
@@ -213,11 +235,12 @@ p {
 }
 
 .skillIMG {
-	border : 1px solid #000000;
 	width : 50px;
 	height : 50px;
-	border-radius: 5px;
 	text-align : center; 
+	
+	box-shadow : 1px 1px 3px;
+	border-radius: 3px 3px 3px 3px;
 }
 
 @media (max-width: 767px) {
