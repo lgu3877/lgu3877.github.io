@@ -194,6 +194,7 @@ p {
 .sectionPadding {
 	height : 100%;
 	padding : 30px;
+	margin-bottom : 40px;
 	background-color: #FFFFFF;
 	border-radius: 4.4%;
 }
@@ -210,7 +211,9 @@ p {
 
 
 
-/* SECTIONS */
+	/* SECTIONS */
+
+/* aboutMyProfile */
 .aboutMyProfile {
 	width : 100%;	
 	height : 100%;	
@@ -228,6 +231,23 @@ p {
 .aboutMyProfile .sectionPadding .innerContents .bucket {
 	margin-bottom: 3px;
 }
+
+/* PROJECTS */
+
+.projects {
+	width : 100%;	
+	height : 100%;	
+}
+.projectIMGS {
+}
+
+.projectIMG {
+	max-width : 100%;
+	height : auto;
+}
+
+
+/* LEVELS */
 .levels {
 	min-width : 250px;
 	max-width : 100%;
@@ -243,29 +263,45 @@ p {
 	border-radius: 3px 3px 3px 3px;
 }
 
-@media (max-width: 767px) {
-/*   .header { */
-/*     text-align: center; */
-/*   } */
-/*   .header .profile-image { */
-/*     float: none !important; */
-/*     margin: 0 auto; */
-/*   } */
-/*   .header .profile-content { */
-/*     float: none !important; */
-/*     text-align: center; */
-/*   } */
-/*   .header .btn { */
-/*     margin-top: 30px; */
-/*     float: none !important; */
-/*   } */
-/*   .project-image { */
-/*     margin-bottom: 15px; */
-/*   } */
+.levelsHead {
+	color: #7A7A7A;
 }
 
-@media (min-width: 1400px) {
-/*   .container { */
-/*     width: 1360px; */
-/*   } */
+.barGraph{
+	background : #D4F4FA;
+	height : 25px;
+}
+
+.fillPercent {
+	background : #0000B7;
+	height : 25px;
+}
+
+
+
+
+@media (max-width: 767px) {
+	
+}
+
+@media (max-width: 1000px) {
+
+/* /* 	The table status sends the side menu to the header. */ */
+/* 	.aside { */
+/* 		flex-direction : column; */
+/* 		width : 100%; */
+/* 		height : 300px; */
+/* 		border-left: 15px solid #000000; */
+/* 		background-color: #F5F5F5; */
+	
+/* 		padding: 30px; */
+/* 		margin-top : 20px; */
+/* 	} */
+/* 	.contents-wrapper { */
+/* 		flex-direction: column; */
+/* 		width : 100%; */
+/* 		height : 100%; */
+	
+/* 	} */
+	
 }
