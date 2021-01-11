@@ -32,6 +32,10 @@ h2 {
 	font-size : 40px;
 }
 
+.textCenter {
+	text-align: center;
+}
+
 .name {
 	margin-top : 5px;
 	margin-left : 10px;
@@ -187,6 +191,7 @@ p {
 
 .second-line{
 	flex : 3;
+	height : 100%;
 	padding-left: 10px;
 	padding-right: 10px;
 }
@@ -244,6 +249,7 @@ p {
 .projectIMG {
 	max-width : 100%;
 	height : auto;
+	box-shadow : 1px 1px 3px;
 }
 
 
@@ -251,7 +257,7 @@ p {
 .levels {
 	min-width : 250px;
 	max-width : 100%;
-	height : 300px;
+	height : 100%;
 }
 
 .skillIMG {
@@ -277,7 +283,38 @@ p {
 	height : 25px;
 }
 
+/* HISTORY */
+.History{
+	min-width : 250px;
+	max-width : 100%;
+	height : 100%;
+}
+.lifeLine {
+	height : 450px;
+}
+.historyLine {
+	height : 100%;
+	width : 5px;
+	height : 450px;
+	background: #5AAEFF;
+	margin-left: 10px;
+}
 
+.circleArea{
+	width : 10px;
+	height : 10px;
+	padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: -3.1px
+}
+.historyCircle {
+	width : 100%;
+	height : 100%;
+	border-radius: 50%;	
+	background: #ABABAB;
+	border : 1px solid #757575;
+	 
+}
 
 
 @media (max-width: 767px) {
