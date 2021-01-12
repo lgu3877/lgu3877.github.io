@@ -289,13 +289,19 @@ p {
 	max-width : 100%;
 	height : 100%;
 }
+
+.History .sectionPadding .bucket{
+	display : flex;
+}
+
 .lifeLine {
-	height : 450px;
+	height : 100%;
+	flex : 1;
 }
 .historyLine {
 	height : 100%;
 	width : 5px;
-	height : 450px;
+	height : 600px;
 	background: #5AAEFF;
 	margin-left: 10px;
 }
@@ -303,8 +309,7 @@ p {
 .circleArea{
 	width : 10px;
 	height : 10px;
-	padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 180px;
     margin-left: -3.1px
 }
 .historyCircle {
@@ -315,7 +320,31 @@ p {
 	border : 1px solid #757575;
 	 
 }
+.box {
+	flex : 7;
+	width : 100%;
+	height : 100%;
+	color : #FFFFFF;
+	margin-bottom: 30px;
+}
 
+.headBox {
+	width : 100%;
+	height : 100%;
+	margin-bottom : 10px;
+	border-radius: 3px 3px 3px 3px;
+	background: #0D3FA5;
+	padding : 3px;
+}
+
+.contentBox {
+	width : 100%;
+	height : 100%;
+	margin-bottom : 10px; 
+	border-radius: 3px 3px 3px 3px;
+	background: #0D3FA5;
+	padding : 7px;
+}
 
 @media (max-width: 767px) {
 	
