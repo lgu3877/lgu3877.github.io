@@ -252,6 +252,11 @@ p {
 	box-shadow : 1px 1px 3px;
 }
 
+.projects .sectionPadding .innerContents .bucket .bucketHead {
+	color : #815B7C;
+	font-size: 22px;
+}
+
 
 /* LEVELS */
 .levels {
@@ -269,8 +274,30 @@ p {
 	border-radius: 3px 3px 3px 3px;
 }
 
+.levelStar {
+	font-size: 14px;
+}
+
+.fa-star {
+	color: #FFFF7E;
+    box-shadow: 1px 1px 6px;
+}
+
+.fa-star-half {
+	color: #FFFF7E;
+    box-shadow: 1px 1px 6px;	
+}
+
 .levelsHead {
+	position: relative;
 	color: #7A7A7A;
+	margin-bottom: 15px;
+}
+
+.skillStars {
+	position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .barGraph{
