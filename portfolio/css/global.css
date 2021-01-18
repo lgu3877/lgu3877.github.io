@@ -16,6 +16,8 @@ body {
   display : inline-flex;
 }
 
+
+
 /* H TAGS */
 h1,
 h2,
@@ -85,6 +87,10 @@ p {
     margin-inline-end: 0px;
 }
 
+/* SPAN */
+.underBar{
+	border-bottom: 3px solid #14899D;
+}
 
 /* HEADER */
 .header {	
@@ -276,6 +282,7 @@ p {
 
 .levelStar {
 	font-size: 14px;
+	margin-bottom: 45px;
 }
 
 .fa-star {
@@ -305,8 +312,40 @@ p {
 	height : 25px;
 }
 
-.fillPercent {
+
+@keyframes java {
+	0% { width : 0;}
+	100% {width : 75%;}
+}
+
+.java {
+	background : #D9752C; 
+	width: 75%;
+	-webkit-animation: java 2s ease;
+	height : 25px;
+}
+
+@keyframes javascript {
+	0% { width : 0;}
+	100% {width : 60%;}
+}
+
+.javascript {
+	background : #DFCB48; 
+	width: 60%;
+	-webkit-animation: javascript 2s ease;
+	height : 25px;
+}
+
+@keyframes python {
+	0% { width : 0;}
+	100% {width : 45%;}
+}
+
+.python {
 	background : #0000B7;
+	width: 45%;
+	-webkit-animation: python 2s ease;
 	height : 25px;
 }
 
