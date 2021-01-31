@@ -17,6 +17,9 @@
 <!-- font awesome js kit -->
 <script src="https://kit.fontawesome.com/3fde6be1fa.js" crossorigin="anonymous"></script>
 
+<!-- Jquery src -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
 
 <title>
 	"
@@ -553,12 +556,47 @@
 <!-- 				</div> -->
 <!-- 			</section>			 -->
 		
+<!-- goTo Top button -->
+<a id="toTop" href="javascript:window.scrollTo(0,0);">TOP</a>
+
+
 
 
 <!-- FOOTER -->
 <footer>
 
 </footer>
+
+<script type="text/javascript">
+// document.onscroll = function(){ 
+$(document).scroll(function() {
+	let percent = ($(window).scrollTop() / $(document).height()) * 100;
+	$('#toTop').html(Math.round(percent));
+});
+
+$(function() { // 보이기 | 숨기기 
+
+
+	$(window).scroll(function() { 
+// 		let percent = ($(window).scrollTop() / $(document).height()) * 100;
+// 		$('#toTop').html(Math.round(percent));
+		if ($(this).scrollTop() > 250) { //250 넘으면 버튼이 보여짐니다. 
+			
+			$('#toTop').fadeIn();
+			
+		} else if ($(this).scrollTop() < 250) { 
+			$('#toTop').fadeOut();
+		} 
+	}); // 버튼 클릭시 
+	
+	$("#toTop").click(function() { 
+	$('html, body').animate({ 
+		scrollTop : 0 // 0 까지 animation 이동합니다. 
+	}, 400); // 속도 400 
+	return false; 
+	}); 
+});
+</script>
 
 
 </body>
