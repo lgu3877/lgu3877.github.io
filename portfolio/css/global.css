@@ -207,7 +207,7 @@ p {
 	padding : 30px;
 	margin-bottom : 40px;
 	background-color: #FFFFFF;
-	border-radius: 4.4%;
+	border-radius: 2em;
 }
 
 .buketHead {
@@ -411,6 +411,16 @@ p {
 	background: #0D3FA5;
 	padding : 7px;
 }
+
+
+a#toTop { 
+	position: fixed; 
+	right: 1%; 
+	bottom: 30px; 
+	display: none; 
+	z-index: 9999; 
+}
+
 
 @media (max-width: 767px) {
 	
