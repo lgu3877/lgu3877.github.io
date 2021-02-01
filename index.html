@@ -437,6 +437,25 @@
 								
 							</div>
 							
+							<!-- C -->
+							<div class="detailBarBucket">
+								
+								<h3 class="levelsHead">
+									C 
+									<span class="skillStars">
+										<i class="fas fa-star"></i> 
+										<i class="fas fa-star-half"></i>
+									</span>
+								</h3>
+								
+								<div class="barGraph"> 
+									
+									<div class="c">
+									</div>
+									
+								</div>
+								
+							</div>
 							
 							<!-- 	Javascript -->
 							<div class="bucket">
@@ -475,17 +494,40 @@
 									<div class="python">
 									</div>
 									
-									
-									
 								</div>
 								
 							</div>
 							
 							
 							
+<!-- 							DATABASE -->
+							
+							<!-- SQL -->
+							<div class="detailBarBucket">
+								
+								<h3 class="levelsHead">
+									SQL 
+									<span class="skillStars">
+										<i class="fas fa-star"></i> 
+										<i class="fas fa-star-half"></i>
+									</span>
+								</h3>
+								
+								<div class="barGraph"> 
+									
+									<div class="sql">
+									</div>
+									
+								</div>
+								
+							</div>
+							
 						</div>
-						
 					</div>	
+					
+					<div class="moreTrigger colorChangeAnimation" >
+						▼ More
+					</div>
 				</div>
 			</section>
 			
@@ -556,8 +598,12 @@
 <!-- 				</div> -->
 <!-- 			</section>			 -->
 		
+		
 <!-- goTo Top button -->
-<a id="toTop" href="javascript:window.scrollTo(0,0);">TOP</a>
+<a class="colorChangeAnimation" id="toTop" href="javascript:window.scrollTo(0,0);">
+	<i class="fas fa-chevron-circle-up" ></i>
+	<span id="percentScroll"></span>
+</a>
 
 
 
@@ -567,35 +613,68 @@
 
 </footer>
 
+
+<!-- moreTrigger action JavaScript Logic -->
 <script type="text/javascript">
-// document.onscroll = function(){ 
-$(document).scroll(function() {
-	let percent = ($(window).scrollTop() / $(document).height()) * 100;
-	$('#toTop').html(Math.round(percent));
-});
 
-$(function() { // 보이기 | 숨기기 
+	// moreTrigger click function 
+	$( ".moreTrigger" ).click(function() {
+		  
+		  // hide content 
+		  $( ".detailBarBucket" ).slideToggle( "fast" );
+		      let $this = $(this);
+		        $this.toggleClass("open");
+				
+		        
+		        if ($this.hasClass("open")) {
+		            $this.html("▲ Less");
+		        } else {
+		            $this.html("▼ More");
+		        }
+		});
+</script>
+
+<!-- goTo Top button JavaScript Logic -->
+<script type="text/javascript">
 
 
+// toTop Button function
+$(function() { 
+
+	
 	$(window).scroll(function() { 
-// 		let percent = ($(window).scrollTop() / $(document).height()) * 100;
-// 		$('#toTop').html(Math.round(percent));
-		if ($(this).scrollTop() > 250) { //250 넘으면 버튼이 보여짐니다. 
+		
+// 		percentage calcu
+		let percent = calcuPageScrollPercentage();
+		
+// 		Data add 
+		$('#percentScroll').html(Math.round(percent) + '%');
+		
+// 		fadeIn 250 up
+		if ($(this).scrollTop() > 250) { 
 			
 			$('#toTop').fadeIn();
-			
+		
+// 		fadeOut 250 under
 		} else if ($(this).scrollTop() < 250) { 
 			$('#toTop').fadeOut();
 		} 
-	}); // 버튼 클릭시 
+	}); 
 	
+// 	Click button event
 	$("#toTop").click(function() { 
 	$('html, body').animate({ 
-		scrollTop : 0 // 0 까지 animation 이동합니다. 
-	}, 400); // 속도 400 
+		scrollTop : 0 
+	}, 400); // speed 400
 	return false; 
 	}); 
 });
+
+//	Page Scroll percentage calcu function
+function calcuPageScrollPercentage() {
+	let percent = ($(window).scrollTop() / ($(document).height() - $(window).height())) * 100;
+	return percent;
+}
 </script>
 
 
