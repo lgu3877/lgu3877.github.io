@@ -17,6 +17,11 @@ body {
 }
 
 
+/* a TAG */
+a:link {text-decoration: none; }
+a:visited {text-decoration: none;}
+a:active {text-decoration: none; }
+
 
 /* H TAGS */
 h1,
@@ -27,7 +32,7 @@ h5,
 h6 {
 
 	font-weight : 700;
-	color : #4951A;
+	color : #000000;
 }
 
 h2 {
@@ -265,6 +270,11 @@ p {
 
 
 /* LEVELS */
+
+.levels .sectionPadding {
+	padding : 30px 30px 0px 30px;
+}
+
 .levels {
 	min-width : 250px;
 	max-width : 100%;
@@ -312,6 +322,10 @@ p {
 	height : 25px;
 }
 
+.detailBarBucket {
+	display : none;
+}
+
 
 @keyframes java {
 	0% { width : 0;}
@@ -324,6 +338,8 @@ p {
 	-webkit-animation: java 2s ease;
 	height : 25px;
 }
+
+
 
 @keyframes javascript {
 	0% { width : 0;}
@@ -348,6 +364,60 @@ p {
 	-webkit-animation: python 2s ease;
 	height : 25px;
 }
+
+
+@keyframes sql {
+	0% { width : 0;}
+	100% {width : 45%;}
+}
+
+
+
+
+/* 
+ Now this Value is
+ [HIDE Value]
+ If you Click MoreTrigger U can show this Value */
+ 
+@keyframes c {
+	0% { width : 0;}
+	100% {width : 45%;}
+}
+
+.c {
+	background : #D9752C; 
+	width: 45%;
+	-webkit-animation: java 2s ease;
+	height : 25px;
+}
+
+.sql {
+	background : #0000B7;
+	width: 45%;
+	-webkit-animation: python 2s ease;
+	height : 25px;
+}
+
+
+
+
+
+
+
+
+
+.moreTrigger {
+	margin-top : 20px;
+	cursor: pointer;
+	border-radius : 1em;
+	text-align : center;
+	width : 100%;
+}
+
+
+
+
+
 
 /* HISTORY */
 .History{
@@ -413,13 +483,54 @@ p {
 }
 
 
-a#toTop { 
+a#toTop {
+	display: none;
 	position: fixed; 
-	right: 1%; 
+	right: 0.5%; 
+	width : 55px;
 	bottom: 30px; 
-	display: none; 
 	z-index: 9999; 
+	border-radius : 1em;
+	cursor: pointer;
+	padding: 5px 7px 4px;
+	text-align : center;
+	
+
 }
+
+
+
+
+a#toTop #percentScroll {
+	text-align : right;
+	width : 32px;
+	float : right;
+}
+
+
+
+
+/* ANIMATION */
+.colorChangeAnimation {
+	color:#FFFFFF;
+	background-image: linear-gradient(to left,
+    transparent,
+    transparent 50%,
+    #FFFFFF 50%,
+    #FFFFFF);
+	background-color : #000000;
+	background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .25s ease-in;
+}
+
+.colorChangeAnimation:hover {
+  background-position: 0 0;
+  color : black;
+}
+
+
+
 
 
 @media (max-width: 767px) {
@@ -428,7 +539,8 @@ a#toTop {
 
 @media (max-width: 1000px) {
 
-/* /* 	The table status sends the side menu to the header. */ */
+}
+/* /* 	The table status sends the side menu to the header. */ 
 /* 	.aside { */
 /* 		flex-direction : column; */
 /* 		width : 100%; */
@@ -445,5 +557,3 @@ a#toTop {
 /* 		height : 100%; */
 	
 /* 	} */
-	
-}
