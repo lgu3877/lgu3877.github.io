@@ -17,6 +17,9 @@
 <!-- font awesome js kit -->
 <script src="https://kit.fontawesome.com/3fde6be1fa.js" crossorigin="anonymous"></script>
 
+<!-- Jquery src -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
 
 <title>
 	"
@@ -434,6 +437,25 @@
 								
 							</div>
 							
+							<!-- C -->
+							<div class="detailBarBucket">
+								
+								<h3 class="levelsHead">
+									C 
+									<span class="skillStars">
+										<i class="fas fa-star"></i> 
+										<i class="fas fa-star-half"></i>
+									</span>
+								</h3>
+								
+								<div class="barGraph"> 
+									
+									<div class="c">
+									</div>
+									
+								</div>
+								
+							</div>
 							
 							<!-- 	Javascript -->
 							<div class="bucket">
@@ -472,17 +494,40 @@
 									<div class="python">
 									</div>
 									
-									
-									
 								</div>
 								
 							</div>
 							
 							
 							
+<!-- 							DATABASE -->
+							
+							<!-- SQL -->
+							<div class="detailBarBucket">
+								
+								<h3 class="levelsHead">
+									SQL 
+									<span class="skillStars">
+										<i class="fas fa-star"></i> 
+										<i class="fas fa-star-half"></i>
+									</span>
+								</h3>
+								
+								<div class="barGraph"> 
+									
+									<div class="sql">
+									</div>
+									
+								</div>
+								
+							</div>
+							
 						</div>
-						
 					</div>	
+					
+					<div class="moreTrigger colorChangeAnimation" >
+						▼ More
+					</div>
 				</div>
 			</section>
 			
@@ -553,12 +598,84 @@
 <!-- 				</div> -->
 <!-- 			</section>			 -->
 		
+		
+<!-- goTo Top button -->
+<a class="colorChangeAnimation" id="toTop" href="javascript:window.scrollTo(0,0);">
+	<i class="fas fa-chevron-circle-up" ></i>
+	<span id="percentScroll"></span>
+</a>
+
+
 
 
 <!-- FOOTER -->
 <footer>
 
 </footer>
+
+
+<!-- moreTrigger action JavaScript Logic -->
+<script type="text/javascript">
+
+	// moreTrigger click function 
+	$( ".moreTrigger" ).click(function() {
+		  
+		  // hide content 
+		  $( ".detailBarBucket" ).slideToggle( "fast" );
+		      let $this = $(this);
+		        $this.toggleClass("open");
+				
+		        
+		        if ($this.hasClass("open")) {
+		            $this.html("▲ Less");
+		        } else {
+		            $this.html("▼ More");
+		        }
+		});
+</script>
+
+<!-- goTo Top button JavaScript Logic -->
+<script type="text/javascript">
+
+
+// toTop Button function
+$(function() { 
+
+	
+	$(window).scroll(function() { 
+		
+// 		percentage calcu
+		let percent = calcuPageScrollPercentage();
+		
+// 		Data add 
+		$('#percentScroll').html(Math.round(percent) + '%');
+		
+// 		fadeIn 250 up
+		if ($(this).scrollTop() > 250) { 
+			
+			$('#toTop').fadeIn();
+		
+// 		fadeOut 250 under
+		} else if ($(this).scrollTop() < 250) { 
+			$('#toTop').fadeOut();
+		} 
+	}); 
+	
+// 	Click button event
+	$("#toTop").click(function() { 
+	$('html, body').animate({ 
+		scrollTop : 0 
+	}, 400); // speed 400
+	return false; 
+	}); 
+});
+
+//	Page Scroll percentage calcu function
+function calcuPageScrollPercentage() {
+	let percent = ($(window).scrollTop() / ($(document).height() - $(window).height())) * 100;
+	return percent;
+}
+</script>
 
 
 </body>
