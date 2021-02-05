@@ -143,7 +143,6 @@ p {
 
 .active-place {
 	width : 100%;
-	height : 100%;
 	padding-left : 5px;
 }
 
@@ -296,12 +295,12 @@ p {
 }
 
 .fa-star {
-	color: #FFFF7E;
+	color: #FFB85A;
     box-shadow: 1px 1px 6px;
 }
 
 .fa-star-half {
-	color: #FFFF7E;
+	color: #FFB85A;
     box-shadow: 1px 1px 6px;	
 }
 
