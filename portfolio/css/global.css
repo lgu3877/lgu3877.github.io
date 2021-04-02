@@ -266,6 +266,9 @@ p {
 	color : #815B7C;
 	font-size: 22px;
 }
+.projects .sectionPadding .innerContents .bucket {
+	margin-bottom: 75px;
+}
 
 
 /* LEVELS */
@@ -465,7 +468,7 @@ p {
 	width : 100%;
 	height : 100%;
 	color : #FFFFFF;
-	margin-bottom: 59px;
+	margin-bottom: 74px;
 }
 
 .headBox {
@@ -480,10 +483,12 @@ p {
 .contentBox {
 	width : 100%;
 	height : 100%;
+	font-weight : none;
 	margin-bottom : 10px; 
 	border-radius: 3px 3px 3px 3px;
-	background: #0D3FA5;
+	background: #4742DB;
 	padding : 7px;
+	font-size : 14px;
 }
 
 
